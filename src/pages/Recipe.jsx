@@ -23,7 +23,7 @@ export const Recipe = () => {
     <DetailWrapper>
       <div>
         <h2>{details.title}</h2>
-        <img src={details.image} />
+        <img src={details.image} alt="image of food" />
       </div>
       <Info>
         <Button
