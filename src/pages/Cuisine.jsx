@@ -12,12 +12,10 @@ export const Cuisine = () => {
     );
     const recipes = await data.json();
     setCuisine(recipes.results);
-    console.log(recipes);
   };
 
   useEffect(() => {
     getCuisine(params.type);
-    console.log(params.type);
   }, [params.type]);
 
   return (
