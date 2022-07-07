@@ -24,7 +24,7 @@ export const Searched = () => {
       {searchedRecipes.map((item) => (
         <Card key={item.id}>
           <Link to={"/recipe/" + item.id}>
-            <img src={item.image} alt="image of the food" />
+            <img src={item.image} />
             <h4>{item.title}</h4>
           </Link>
         </Card>
