@@ -38,6 +38,14 @@ export const Veggie = () => {
             pagination: false,
             drag: "free",
             gap: "5rem",
+            breakpoints: {
+              650: {
+                perPage: 2,
+              },
+              450: {
+                gap: "2rem",
+              },
+            },
           }}
         >
           {veggie.map((recipe) => {
@@ -67,6 +75,15 @@ const Card = styled.div`
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+  @media (max-width: 1500px) {
+    min-height: 15rem;
+  }
+  @media (max-width: 1000px) {
+    min-height: 10rem;
+  }
+  @media (max-width: 650px) {
+    min-height: 10rem;
+  }
 
   img {
     border-radius: 2rem;

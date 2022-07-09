@@ -29,7 +29,7 @@ export const Cuisine = () => {
         return (
           <Card key={item.id}>
             <Link to={"/recipe/" + item.id}>
-              <img src={item.image} alt="" />
+              <img src={item.image} alt="food" />
               <h4>{item.title}</h4>
             </Link>
           </Card>
@@ -43,6 +43,10 @@ const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
+
+  /* @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+  } */
 `;
 
 const Card = styled.div`

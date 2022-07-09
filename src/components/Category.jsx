@@ -48,6 +48,19 @@ const Slink = styled(NavLink)`
   cursor: pointer;
   transform: scale(0.8);
 
+  @media (max-width: 550px) {
+    width: 5rem;
+    height: 5rem;
+  }
+  @media (max-width: 450px) {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+  }
+  @media (max-width: 400px) {
+    margin-right: 0.5rem;
+  }
+
   h4 {
     color: white;
     font-size: 0.8rem;

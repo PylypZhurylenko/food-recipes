@@ -61,6 +61,13 @@ const DetailWrapper = styled.div`
   margin-bottom: 5rem;
   display: flex;
 
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
   .active {
     background: linear-gradient(35deg, #494949, #313131);
     color: white;
@@ -69,24 +76,54 @@ const DetailWrapper = styled.div`
   h2 {
     margin-bottom: 2rem;
   }
+  h3 {
+    @media (max-width: 1200px) {
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+    }
+  }
   li {
     font-size: 1.2rem;
     line-height: 2.5rem;
   }
-  ul {
-    margin-top: 2rem;
+  ol {
+    margin-top: 3rem;
+    @media (max-width: 1200px) {
+      margin-left: 2rem;
+    }
+  }
+  img {
+    @media (max-width: 1200px) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 
 const Button = styled.button`
-  /* width: 100%; */
+  width: 10rem;
   padding: 1rem 2rem;
   color: #313131;
   background: white;
   border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
 `;
 const Info = styled.div`
   margin-left: 10rem;
+  @media (max-width: 1200px) {
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;

@@ -37,7 +37,15 @@ export const Popular = () => {
             arrwos: false,
             pagination: false,
             drag: "free",
-            gap: "5rem",
+            gap: "7rem",
+            breakpoints: {
+              650: {
+                perPage: 3,
+              },
+              450: {
+                perPage: 2,
+              },
+            },
           }}
         >
           {popular.map((recipe) => {
@@ -63,10 +71,17 @@ const Wrapper = styled.div`
   margin: 4rem 0rem;
 `;
 const Card = styled.div`
-  min-height: 25rem;
+  min-height: 20rem;
+  min-width: 10rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+  @media (max-width: 1500px) {
+    min-height: 15rem;
+  }
+  @media (max-width: 1000px) {
+    min-height: 10rem;
+  }
 
   img {
     border-radius: 2rem;
@@ -74,6 +89,7 @@ const Card = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-right: 5rem;
   }
   p {
     position: absolute;
